@@ -1,0 +1,17 @@
+
+flex calculator.l
+bison -d calculator.y
+gcc lex.yy.c calculator.tab.c -o x.exe
+.\x.exe
+
+
+Define a regular expression for numbers.
+Define rules for each arithmetic operator and parentheses.
+Return tokensfor the Yacc file.
+Handle whitespace and newline characters.
+
+Define the grammar for arithmetic expressions.
+Handle operator precedence and associativity 
+Write actions for each rule to calculate the result.
+Add error checks (e.g. check division by zero).
+
