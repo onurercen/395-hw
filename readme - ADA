@@ -1,0 +1,31 @@
+Overview
+An advanced calculator implemented in Ada that handles complex arithmetic operations with parentheses and variable support. This robust implementation features proper expression parsing, operator precedence, and variable management.
+Features
+Full Arithmetic Support: +, -, *, / with correct precedence
+
+Parentheses Handling: Nested parentheses support
+
+Variables: Store and recall named variables
+
+Error Handling: Comprehensive error detection and messages
+
+REPL Interface: Interactive command-line interface
+
+
+
+
+Input Syntax
+Expressions:
+(3 + 5) * 2
+4.2 / (1.5 - 0.3)
+
+Exiting:
+exit
+
+
+
+
+
+HOW TO USE
+COPY THE CODE AND PASTE IT INTO https://www.tutorialspoint.com/compile_ada_online.php
+EXECUTE IT

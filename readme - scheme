@@ -1,0 +1,21 @@
+ Overview
+This program is a simple calculator written in Scheme programming language. It accepts mathematical expressions in both infix (like 3 + 2) and prefix (like + 3 2) notation, and calculates the result. It supports variable assignment and usage in calculations.
+
+🛠 Features
+Basic arithmetic operations: Addition (+), Subtraction (-), Multiplication (*), Division (/)
+
+Variable support: Define variables with (x = 5) syntax and use them in subsequent calculations
+
+Dual notation support:
+
+Infix: (3 + 2)
+
+Prefix: (+ 3 2)
+
+Interactive interface: User-friendly command line interface
+
+HOW TO RUN
+
+GO TO : https://www.jdoodle.com/execute-scheme-online
+copy and paste the code into jdoodle
+execute it 

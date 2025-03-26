@@ -1,0 +1,18 @@
+Overview
+A simple calculator implemented in Rust that handles basic arithmetic operations and variable assignments. This implementation features tokenization, parsing, and evaluation of mathematical expressions with support for variables.
+
+Features
+Basic Arithmetic: Addition (+), Subtraction (-), Multiplication (*), Division (/)
+
+Variables: Store and recall values using variables
+
+Parentheses: Support for expression grouping
+
+Error Handling: Clear error messages for invalid expressions
+
+Interactive REPL: Read-Eval-Print Loop interface
+
+Usage :
+
+Copy and paste the code into https://www.programiz.com/rust/online-compiler/
+Execute it

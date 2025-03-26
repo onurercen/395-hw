@@ -1,0 +1,23 @@
+Overview
+A simple calculator implemented in Prolog that handles basic arithmetic operations and variable assignments. Designed specifically to work with the TutorialsPoint online Prolog compiler.
+
+Features
+Basic Arithmetic: Addition (+), Subtraction (-), Multiplication (*), Division (/)
+
+Parentheses: Support for expression grouping
+
+Error Handling: Basic error detection and messages
+
+🛠️ How to Use
+Starting the Calculator
+Copy the entire code into the TutorialsPoint Prolog compiler
+
+Run the calculator by entering:
+
+calculator.
+Expressions:
+3 + 5 * 2.
+(4 + 2) / 3. // do not forget the . at the end of the expression - otherwise it will not work...
+
+Exiting:
+quit.

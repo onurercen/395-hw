@@ -1,0 +1,16 @@
+Overview
+A simple calculator implemented in Perl that handles basic arithmetic operations and variable assignments. This implementation features expression evaluation with support for variables in a simple REPL interface.
+
+Features
+Basic Arithmetic: Supports +, -, *, / operations
+
+Variables: Store and recall values using variables
+
+Error Handling: Basic error detection for invalid expressions
+
+Interactive REPL: Read-Evaluate-Print Loop interface
+
+HOW TO USE 
+
+Copy and paste the entire code into https://www.tutorialspoint.com/execute_perl_online.php
+Execute it.

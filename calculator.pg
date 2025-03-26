@@ -1,0 +1,50 @@
+:- dynamic(var_value/2).
+
+% Main predicate to start the calculator
+calculator :-
+    write('Simple Prolog Calculator (type "quit." to exit)'), nl,
+    calculator_loop.
+
+calculator_loop :-
+    write('> '),
+    read(Input),
+    (Input == quit -> 
+        write('Goodbye!'), nl
+    ;
+        process_input(Input),
+        calculator_loop
+    ).
+
+% Process user input
+process_input(Input) :-
+    (Input = (Var = Expr) ->
+        (eval(Expr, Value),
+         (retract(var_value(Var, _)) -> true ; true),
+         assertz(var_value(Var, Value)),
+         write('Assigned '), write(Var), write(' = '), write(Value), nl)
+    ;
+        (number(Input) ->
+            write('Result: '), write(Input), nl
+        ;
+            (compound(Input) ->
+                eval(Input, Value),
+                write('Result: '), write(Value), nl
+            ;
+                (atom(Input), var_value(Input, Value) ->
+                    write('Value: '), write(Value), nl
+                ;
+                    write('Error: Invalid input'), nl
+                )
+            )
+        )
+    ).
+
+% Evaluation predicate
+eval(N, N) :- number(N).
+eval(V, Value) :- atom(V), var_value(V, Value), !.
+eval(V, _) :- atom(V), !, write('Error: Variable '), write(V), write(' not defined'), nl, fail.
+eval(A + B, Value) :- eval(A, AVal), eval(B, BVal), Value is AVal + BVal.
+eval(A - B, Value) :- eval(A, AVal), eval(B, BVal), Value is AVal - BVal.
+eval(A * B, Value) :- eval(A, AVal), eval(B, BVal), Value is AVal * BVal.
+eval(A / B, Value) :- eval(A, AVal), eval(B, BVal), BVal =\= 0, Value is AVal / BVal.
+eval((A), Value) :- eval(A, Value).
